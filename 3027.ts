@@ -2,9 +2,9 @@ function numberOfPairs(points: number[][]): number {
     let res: number = 0;
     points.sort((a, b) => {
         if (a[0] === b[0]) {
-            return b[1] - a[1]; // если x одинаковые → сортируем по y по убыванию
+            return b[1] - a[1]; // if x is the same → sort by y in descending order
         }
-        return a[0] - b[0];   // иначе сортируем по x по возрастанию
+        return a[0] - b[0];   // otherwise sort by x in ascending order
     });
     let map: Map<number, number> = new Map();
     for(let i: number = 0; i < points.length; i++) {
