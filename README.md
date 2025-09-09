@@ -7,7 +7,6 @@ A collection of my LeetCode problem solutions implemented in TypeScript, focusin
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)
 
-**Total Problems Solved:** 8  
 **Languages:** TypeScript  
 **Focus Areas:** Data Structures, Algorithms, Problem Solving
 
