@@ -2,12 +2,14 @@
 
 A collection of my LeetCode problem solutions implemented in TypeScript, focusing on clean code, optimal algorithms, and comprehensive test cases.
 
+Here's my leetcode profile: https://leetcode.com/u/dosik210904/
+
 ## 📊 Progress Overview
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)
 
-**Languages:** TypeScript  
+**Language:** TypeScript  
 **Focus Areas:** Data Structures, Algorithms, Problem Solving
 
 ## 🛠️ How to Run
