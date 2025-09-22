@@ -68,7 +68,7 @@ class TaskManager {
         this.map = new Map();
 
         for (let t of tasks) {
-            // создаём свежий объект и кладём и в map, и в heap
+            // create a fresh object and put it in map and heap
             const task: Task = { userId: t[0], taskId: t[1], priority: t[2] };
             this.map.set(task.taskId, task);
             this.heap.push(task);
@@ -83,28 +83,28 @@ class TaskManager {
 
     edit(taskId: number, newPriority: number): void {
         const old = this.map.get(taskId);
-        if (!old) return; // гарантии входа говорят, что taskId существует, но на всякий случай
+        if (!old) return; // guarantees of entry say that taskId exists, but just in case
         // не мутируем old, создаём новый объект
         const updated: Task = { userId: old.userId, taskId: old.taskId, priority: newPriority };
         this.map.set(taskId, updated);
-        this.heap.push(updated); // пушим новую версию, старая останется в куче как "мусор"
+        this.heap.push(updated); // push the new version, the old one will remain in the heap as "garbage"
     }
 
     rmv(taskId: number): void {
-        this.map.delete(taskId); // ленивое удаление — старые записи в куче будут игнорированы
+        this.map.delete(taskId); // lazy deletion — old records in the heap will be ignored
     }
 
     execTop(): number {
         while (this.heap.heap.length > 0) {
             const task = this.heap.pop()!;
             const cur = this.map.get(task.taskId);
-            // если в map есть задача и приоритет совпадает с извлечённой записью,
+            // if there is a task in the map and the priority matches the extracted record,
             // значит это актуальная запись — выполняем
             if (cur && cur.priority === task.priority) {
                 this.map.delete(task.taskId);
                 return task.userId;
             }
-            // иначе старый/устаревший элемент — пропускаем
+            // otherwise old/stale element — skip
         }
         return -1;
     }
